@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Personajes - Proyecto Harry Potter</title>
+    <link rel="stylesheet" href="../css/styles.css" />
+    <link rel="shortcut icon" href="../assets/images/logo.png" type="image/x-icon">
+  </head>
+  <body class="page-characters">
+    <header>
+      <nav>
+        <ul>
+          <li><a href="../index.html">Inicio</a></li>
+          <li><a href="personajes.html">Personajes</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="characters">
+        <h1>Personajes <button type="button" class="btn btn-characters" id="all">Todos</button></h1>
+        <ul class="house-filter">
+          <li type="button" class="btn" id="gryffindor"></li>
+          <li type="button" class="btn" id="slytherin"></li>
+          <li type="button" class="btn" id="ravenclaw"></li>
+          <li type="button" class="btn" id="hufflepuff"></li>
+        </ul>
+        <div class="grid">
+          <!-- Aquí se insertarán las tarjetas de los personajes dinámicamente -->
+        </div>
+      </section>
+      <button type="button" id="scrollToTopBtn">↑</button>
+    </main>
+    <footer>
+      <p>&copy; 2024 Proyecto Harry Potter. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="../app/main.js"></script>
+  </body>
+</html>

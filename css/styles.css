@@ -1,0 +1,386 @@
+*
+{
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  font-family:Arial, Helvetica, sans-serif;
+}
+
+header {
+  background-color: #323a42;
+  color: white;
+  padding: 1em 0;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  padding: 0;
+}
+
+nav ul li {
+  margin: 0 1em;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+nav ul li a:hover {
+  color: #cccccc;
+}
+
+main {
+  padding: 2em;
+  text-align: center;
+}
+
+footer {
+  background-color: #323a42;
+  color: white;
+  text-align: center;
+  padding: 0.5rem 0;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+}
+
+/* Pagina principal */
+.home {
+  background-image: url(../assets/images/riassunto-harry-potter.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.intro {
+  margin: 40px auto;
+  font-weight: bolder;
+  background-color: #ffffff8c;
+  text-align: left;
+  padding: 5px 30px 20px 30px;
+  position: relative; 
+  width: 80%;
+  border-radius: 20px;
+}
+
+.intro h1, h2, h3 {
+  margin-top: 20px;
+  font-weight: bolder;
+}
+
+.intro2 {
+  margin: 40px auto;
+  font-weight: bolder;
+  background-color: #ffffff8c;
+  text-align: left;
+  padding: 5px 30px 20px 30px;
+  position: relative; 
+  width: 80%;
+  border-radius: 20px;
+  margin-top: 1rem;
+}
+
+.intro p, li {
+  font-size: 1rem;
+  margin-top: 20px;
+  }
+
+.house-section {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  width: 100%;
+}
+
+.house-description {
+  flex: 1;
+  box-sizing: border-box;
+  margin: 10px 0;
+  padding: 5px 30px 20px 30px;
+  border-radius: 10px;
+  min-width: 250px;
+}
+
+.house-description a {
+  text-decoration: none;
+  color: #036ee9;
+}
+
+.house-description a:hover {
+  text-decoration:underline;
+}
+
+span {
+  font-weight: bolder;
+}
+
+#books-movies {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 0;
+  color: #ffffff8c;
+}
+
+#books-movies h3 {
+  font-size: 26px;
+  margin-bottom: 50px;
+}
+
+#books-list,
+#movies-list {
+  flex: 1;
+  padding: 10px;
+  justify-content: space-around;
+}
+
+#books-movies h4 {
+  font-size: 20px;
+  padding: 0;
+  margin: 0;
+}
+
+#books,
+#movies {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+#books li p,
+#movies li p {
+  margin: 5px 0 0;
+}
+
+/* Pagina de los personajes */
+.page-characters {
+  background-color: #f3f70a1a;
+  background-image: url(../assets/images/wp4786206.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.btn-characters {
+  border: none;
+  background-color: #343a40;
+  color: #dbdbdb;
+  font-weight: bold;
+  font-size: 1rem;
+  margin-left: 10px;
+  border-radius: 3px;
+  padding: 10px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.btn-characters:hover {
+  background-color: #23282c;
+  transform: scale(1.1);
+}
+
+.house-filter {
+  list-style: none;
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 30px;
+}
+
+.house-filter .btn {
+  background-size: cover;
+  background-position: center;
+  width: 120px;
+  height: 140px;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.house-filter .btn:hover {
+  transform: scale(1.2);
+  filter: drop-shadow(1px 1px 10px rgba(0,0,0,0.75));
+}
+
+#gryffindor {
+  background-image: url('../assets/images/Gryffondor.png');
+}
+
+#slytherin {
+  background-image: url('../assets/images/Serpentard.png');
+}
+
+#hufflepuff {
+  background-image: url('../assets/images/Hufflepuff.png');
+}
+
+#ravenclaw {
+  background-image: url('../assets/images/Serdaigle.png');
+}
+
+.grid {
+  width: 80%;
+  display: grid;
+  justify-items: center;
+  margin: 0 auto;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin-bottom: 70px;
+}
+
+.card {
+  background-color: #ffd90011;
+  box-shadow: 0px 0px 20px #4d4d4d99;
+  border-radius: 10px;
+  width: 80%;
+  text-decoration: none;
+  transition: transform 0.3s ease;
+
+  view-timeline-name: --image;
+  view-timeline-axis: block;
+
+  animation-timeline: --image;
+  animation-name: show;
+
+  animation-range: entry 25% cover 30%;
+  animation-fill-mode: both;
+}
+
+.card:hover {
+  transform: scale(1.1);
+}
+
+.card h4 {
+  margin: 20px 0;
+}
+
+.imgCards {
+  width: 150px;
+  height: 200px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.character-house {
+  margin: 20px auto;
+  text-align: center;
+  font-weight: bold;
+  border-radius: 5px;
+  padding: 5px 1px;
+  width: 60%;
+}
+
+.gryffindor {
+  background-image: url('../assets/images/Gryffondor.png');
+  background-size: cover;
+  background-color: #52021b;
+  color: #0f0f0f;
+}
+
+.slytherin {
+  background-image: url('../assets/images/Serpentard.png');
+  background-size: cover;
+  background-color: #173825;
+  color: #0f0f0f;
+}
+
+.hufflepuff {
+  background-image: url('../assets/images/Hufflepuff.png');
+  background-size: cover;
+  background-color: #e79408;
+  color: #131312;
+}
+
+.ravenclaw {
+  background-image: url('../assets/images/Serdaigle.png');
+  background-size: cover;
+  background-color: #0d73da;
+  color: #0c0c0c;
+}
+
+.gryffindor:hover,
+.slytherin:hover,
+.hufflepuff:hover,
+.ravenclaw:hover {
+  border: 1px solid var(--border-hover);
+  transform: scale(1.1);
+}
+
+@keyframes show {
+  from {
+    opacity: 0;
+    scale: 25%;
+  }
+
+  to {
+    opacity: 1;
+    scale: 100%;
+  }
+}
+
+/* Media queries */
+@media (max-width: 1400px) {
+  .card {
+    width: 90%;
+  }
+}
+
+@media (max-width: 1100px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .house-filter .btn {
+    width: 110px;
+    height: 125px;
+  }
+}
+
+@media (max-width: 750px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+  .house-filter .btn {
+    width: 90px;
+    height: 100px;
+  }
+}
+
+@media (max-width: 480px) {
+  .house-filter .btn {
+    width: 60px;
+    height: 70px;
+  }
+}
+
+/* Estilos para el botón de desplazamiento hacia arriba */
+#scrollToTopBtn {
+  display: none;
+  position: fixed;
+  bottom: 80px;
+  right: 40px;
+  width: 50px;
+  height: 50px;
+  background-color: #1d1d1d;
+  color: #e4e4e4; 
+  border: none;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 1.5rem;
+  cursor: pointer;
+  z-index: 1000;
+  transition: opacity 0.3s ease;
+}
+
+#scrollToTopBtn.show {
+  display: block;
+}
