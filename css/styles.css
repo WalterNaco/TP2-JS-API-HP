@@ -327,6 +327,22 @@ span {
     scale: 100%;
   }
 }
+#musicahp {
+    
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  padding: 5px;
+  z-index: 1000;
+  
+}
+
+#musicahp audio {
+  width: 40px;
+  height: 40px;
+  outline: none;
+  cursor: pointer;
+}
 
 /* Media queries */
 @media (max-width: 1400px) {
@@ -344,6 +360,9 @@ span {
     height: 125px;
   }
 }
+#musicahp {
+  display: none;
+}
 
 @media (max-width: 750px) {
   .grid {
@@ -360,6 +379,9 @@ span {
     width: 60px;
     height: 70px;
   }
+  #musicahp {
+    display: none;
+}
 }
 
 /* Estilos para el botón de desplazamiento hacia arriba */
