@@ -6,13 +6,15 @@ const url = 'https://hp-api.onrender.com/api/characters';
 
 fetch(url)
     .then(response => response.json())
-    .then(database => showData(database));
+    .then(database => showData(database))
+    .catch(error => console.error('Error fetching data:', error));
     
 function showData(data) {
     $divCards.innerHTML = '';
     data.forEach(character => {
         let person = character.name.replace(' ', '+');
         let actor = 'Actor';
+        let status = character.alive ? 'Vivo' : 'Muerto';
 
         if (character.gender === 'female') {
             actor = 'Actris';
@@ -33,6 +35,7 @@ function showData(data) {
                     >
                     <p class="character-house"><span>${character.house}</span></p>
                     <p class="character-house"><span>${actor}:</span> ${character.actor}</p>
+                    <p class="character-house"><span>Estado:</span> ${status}</p>
                 </div>
             </a>
             `;
