@@ -1,14 +1,8 @@
 const $divCards = document.querySelector('.grid');
 const $btns = document.querySelectorAll('.btn');
 const $scrollToTopBtn = document.getElementById('scrollToTopBtn');
-
 const url = 'https://hp-api.onrender.com/api/characters';
-
-fetch(url)
-    .then(response => response.json())
-    .then(database => showData(database))
-    .catch(error => console.error('Error fetching data:', error));
-    
+ 
 function showData(data) {
     $divCards.innerHTML = '';
     data.forEach(character => {
@@ -26,7 +20,7 @@ function showData(data) {
         if(character.house) {
             $divCards.innerHTML += `
             <a href="https://www.google.com/search?q=${person}&oq=harr&gs_lcrp=EgZjaHJvbWUqDwgAEEUYOxiDARixAxiABDIPCAAQRRg7GIMBGLEDGIAEMgYIARBFGDkyCggCEAAYsQMYgAQyDQgDEAAYgwEYsQMYgAQyCggEEAAYsQMYgAQyBggFEEUYPDIGCAYQRRg9MgYIBxBFGD0yBggIEEUYQdIBCDEzNDFqMGo0qAIAsAIB&sourceid=chrome&ie=UTF-8" 
-            target="_blank" class="card ${character.house.toLowerCase()}">
+            target="_blank" class="card ${character.house.toLowerCase() }">
                 <div>
                     <h4>${character.name}</h4>
                     <img src="${character.image ? character.image : '../assets/middle.png'}" 
@@ -42,6 +36,19 @@ function showData(data) {
         }
     }); 
 };
+
+function filterCharacters(searchText, data) {
+    const filteredCharacters = data.filter(character => {
+        return character.name.toLowerCase().includes(searchText);
+    });
+
+    showData(filteredCharacters);
+}
+
+fetch(url)
+    .then(response => response.json())
+    .then(database => showData(database))
+    .catch(error => console.error('Error fetching data:', error));
 
 $btns.forEach($btn => {
     $btn.addEventListener('click', (e) => {
@@ -77,3 +84,18 @@ onscroll = () => scrollFunction();
 function scrollToTop() {
   scrollTo({top: 0, behavior: 'smooth'});
 }
+
+const $searchForm = document.getElementById('searchForm');
+const $searchInput = document.getElementById('buscador');
+
+$searchForm.addEventListener('submit', function(event) {
+    event.preventDefault(); // Evitar que se recargue la página al enviar el formulario
+    const searchText = $searchInput.value.trim().toLowerCase();
+    
+    fetch(url)
+        .then(response => response.json())
+        .then(database => {
+            filterCharacters(searchText, database);
+        })
+        .catch(error => console.error('Error fetching data:', error));
+});
