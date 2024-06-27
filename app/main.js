@@ -85,6 +85,19 @@ function scrollToTop() {
   scrollTo({top: 0, behavior: 'smooth'});
 }
 
+const $input = document.getElementById("buscador");
+const $searchBtn = document.getElementById("searchBtn");
+
+$input.addEventListener("focus", function() {
+    $searchBtn.classList.remove("hidden"); 
+});
+
+document.getElementById("searchForm").addEventListener("submit", function(event) {
+    event.preventDefault(); 
+
+    $searchBtn.classList.add("hidden");
+});
+
 const $searchForm = document.getElementById('searchForm');
 const $searchInput = document.getElementById('buscador');
 

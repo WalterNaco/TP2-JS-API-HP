@@ -195,12 +195,18 @@ span {
 }
 
 #searchBtn {
-  font-size: 2em; /* Ajusta el tamaño del emoji */
-  background-color: transparent; /* Cambia el color de fondo del botón */
-  color: #333; /* Cambia el color del emoji */
-  border: none; /* Quita el borde del botón */
-  padding: 10px; /* Ajusta el relleno interno del botón */
-  cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+  font-size: 4em;
+  background-color: transparent;
+  color: #b8aeae;
+  border: none;
+  padding: 20px;
+  cursor: pointer;
+  transition: opacity 0.4s ease-in-out; /* Agrega transición para suavizar el efecto */
+  opacity: 1; /* Asegura que el botón sea visible inicialmente */
+}
+
+#searchBtn.hidden {
+  opacity: 0; /* Hace el botón invisible cuando tiene la clase 'hidden' */
 }
 
 .btn-characters {
