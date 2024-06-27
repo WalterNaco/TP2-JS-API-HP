@@ -8,7 +8,7 @@ function showData(data) {
     data.forEach(character => {
         let person = character.name.replace(' ', '+');
         let actor = 'Actor';
-        let status = character.alive ? 'Vivo' : 'Muerto';
+        let status = character.alive ? 'Vivo' : 'Muerto💀';
 
         if (character.gender === 'female') {
             actor = 'Actris';
@@ -25,11 +25,12 @@ function showData(data) {
                     <h4>${character.name}</h4>
                     <img src="${character.image ? character.image : '../assets/middle.png'}" 
                         class="${character.image ? 'imgCards' : 'imgDefaults'}" 
-                        alt="imagen de ${character.name}"
-                    >
+                        alt="imagen de ${character.name}">
                     <p class="character-house"><span>${character.house}</span></p>
                     <p class="character-house"><span>${actor}:</span> ${character.actor}</p>
+                    <p class="character-house"><span>Especie:</span> ${character.species}</p>
                     <p class="character-house"><span>Estado:</span> ${status}</p>
+                    
                 </div>
             </a>
             `;
@@ -102,7 +103,7 @@ const $searchForm = document.getElementById('searchForm');
 const $searchInput = document.getElementById('buscador');
 
 $searchForm.addEventListener('submit', function(event) {
-    event.preventDefault(); // Evitar que se recargue la página al enviar el formulario
+    event.preventDefault(); 
     const searchText = $searchInput.value.trim().toLowerCase();
     
     fetch(url)
