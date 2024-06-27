@@ -172,6 +172,37 @@ span {
   background-attachment: fixed;
 }
 
+.characters h1 {
+  margin: 50px auto;
+  font-weight: bolder;
+  background-color: #ffffff8c;
+  text-align: center;
+  padding: 5px 30px 10px 30px;
+  position: center; 
+  width: 20%;
+  border-radius: 10px;
+}
+
+#buscador {
+  margin: 50px auto;
+  font-weight: bolder;
+  background-color: ffffff8c;
+  text-align: left;
+  padding: 5px 20px 5px 20px;
+  position: center; 
+  width: 20%;
+  border-radius: 10px;
+}
+
+#searchBtn {
+  font-size: 2em; /* Ajusta el tamaño del emoji */
+  background-color: transparent; /* Cambia el color de fondo del botón */
+  color: #333; /* Cambia el color del emoji */
+  border: none; /* Quita el borde del botón */
+  padding: 10px; /* Ajusta el relleno interno del botón */
+  cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+}
+
 .btn-characters {
   border: none;
   background-color: #343a40;
@@ -343,7 +374,6 @@ span {
   cursor: pointer;
 }
 
-/* Media queries */
 @media (max-width: 1400px) {
   .card {
     width: 90%;
@@ -378,12 +408,12 @@ span {
     width: 60px;
     height: 70px;
   }
-  #musicahp {
-    display: none;
+
+#musicahp {
+  display: none;
 }
 }
 
-/* Estilos para el botón de desplazamiento hacia arriba */
 #scrollToTopBtn {
   display: none;
   position: fixed;
