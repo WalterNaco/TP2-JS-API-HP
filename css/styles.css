@@ -164,7 +164,6 @@ span {
 
 /* Pagina de los personajes */
 .page-characters {
-  background-color: #f3f70a1a;
   background-image: url(../assets/images/wp4786206.jpg);
   background-repeat: no-repeat;
   background-position: center center;
@@ -188,9 +187,9 @@ span {
   font-weight: bolder;
   background-color: ffffff8c;
   text-align: left;
-  padding: 5px 20px 5px 20px;
+  padding: 10px 20px 10px 20px;
   position: center; 
-  width: 20%;
+  width: 25%;
   border-radius: 10px;
 }
 
@@ -201,12 +200,12 @@ span {
   border: none;
   padding: 20px;
   cursor: pointer;
-  transition: opacity 0.4s ease-in-out; /* Agrega transición para suavizar el efecto */
-  opacity: 1; /* Asegura que el botón sea visible inicialmente */
+  transition: opacity 0.4s ease-in-out;
+  opacity: 1; 
 }
 
 #searchBtn.hidden {
-  opacity: 0; /* Hace el botón invisible cuando tiene la clase 'hidden' */
+  opacity: 0; 
 }
 
 .btn-characters {
@@ -363,14 +362,13 @@ span {
     scale: 100%;
   }
 }
-#musicahp {
-    
+
+#musicahp {   
   position: fixed;
   bottom: 10px;
   right: 10px;
   padding: 5px;
   z-index: 1000;
-  
 }
 
 #musicahp audio {

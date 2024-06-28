@@ -32,10 +32,6 @@ body {
     text-align: center;
   }
   
-  .characters h1 { 
-    color: red
-  }
-
   .intro {
     max-width: 800px;
     margin: 0 auto;

@@ -1,6 +1,9 @@
 const $divCards = document.querySelector('.grid');
 const $btns = document.querySelectorAll('.btn');
 const $scrollToTopBtn = document.getElementById('scrollToTopBtn');
+const musicahp = document.getElementById('musicahp');
+musicahp.play();
+
 const url = 'https://hp-api.onrender.com/api/characters';
  
 function showData(data) {
