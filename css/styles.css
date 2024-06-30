@@ -173,17 +173,16 @@ span {
 
 .characters h1 {
   margin: 50px auto;
-  font-weight: bolder;
-  background-color: #ffffff8c;
+  font-size: xx-large;
+  background-color: transparent;
   text-align: center;
   padding: 5px 30px 10px 30px;
   position: center; 
-  width: 20%;
-  border-radius: 10px;
+  width: 30%;
 }
 
 #buscador {
-  margin: 50px auto;
+  margin: auto;
   font-weight: bolder;
   background-color: ffffff8c;
   text-align: left;
